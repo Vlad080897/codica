@@ -1,5 +1,6 @@
 {
   "name": "codica-test2",
+  "homepage": "https://Vlad080897.github.io/codica-test",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -24,6 +25,8 @@
     "web-vitals": "^2.1.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -60,6 +63,7 @@
     "@emotion/styled": "^11.11.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
+    "gh-pages": "^5.0.0",
     "msw": "^1.2.1",
     "prettier": "^2.8.8"
   }
