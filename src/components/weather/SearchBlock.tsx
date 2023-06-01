@@ -54,7 +54,6 @@ const Input = styled(TextField)`
 const Container = styled(Box)`
   display: flex;
   gap: 10px;
-  width: 100vw;
   justify-content: center;
 
   & > div {

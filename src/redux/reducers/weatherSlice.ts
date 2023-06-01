@@ -49,6 +49,9 @@ const weatherSlice = createSlice({
         )
       );
     },
+    toggleLoading: (state) => {
+      state.isLoading = !state.isLoading;
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -130,6 +133,6 @@ const weatherSlice = createSlice({
   },
 });
 
-export const { deleteCity } = weatherSlice.actions;
+export const { deleteCity, toggleLoading } = weatherSlice.actions;
 
 export default weatherSlice.reducer;

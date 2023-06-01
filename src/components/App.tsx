@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { useAppDispatch } from '../hooks/store';
-import { CurrentWeather } from '../redux/reducers/weatherSlice';
+import { CurrentWeather, toggleLoading } from '../redux/reducers/weatherSlice';
 import {
   getCitiesWeather,
   getIsLoading,
@@ -24,6 +24,8 @@ const App: React.FC = () => {
       const cities = JSON.parse(isCitiesInLocalStorage);
       const citiesNames = cities.map((city: CurrentWeather) => city.name);
       dispatch(updateWeather(citiesNames));
+    } else {
+      dispatch(toggleLoading());
     }
   }, []);
 
